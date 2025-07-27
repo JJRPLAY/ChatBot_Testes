@@ -39,6 +39,9 @@ class TestObterResposta(unittest.TestCase):
     def teste_desenvolvimento(self):
         """Teste de respostas sobre desenvolvimento - 4 testes"""
         self.assertEqual(obter_resposta("desenvolvimento web"), "O desenvolvimento web envolve a criação de sites e aplicações web...")
+        self.assertEqual(obter_resposta("desenvolvimento de software"), "O desenvolvimento de software é o processo de criar programas e aplicações...")
+        self.assertEqual(obter_resposta("desenvolvimento de jogos"), "O desenvolvimento de jogos é a criação de jogos eletrônicos...")
+        self.assertEqual(obter_resposta("desenvolvimento de aplicativos móveis"), "O desenvolvimento de aplicativos móveis é a criação de aplicativos para dispositivos móveis...")
 
     def teste_ia(self):
         """Teste de respostas sobre inteligência artificial - 3 testes"""
