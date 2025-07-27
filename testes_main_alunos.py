@@ -46,6 +46,8 @@ class TestObterResposta(unittest.TestCase):
     def teste_ia(self):
         """Teste de respostas sobre inteligência artificial - 3 testes"""
         self.assertEqual(obter_resposta("ia"), "A inteligência artificial é um campo da ciência da computação que se concentra na criação de sistemas que podem realizar tarefas que normalmente requerem inteligência humana.")
+        self.assertEqual(obter_resposta("machine learning"), "O aprendizado de máquina é um subcampo da inteligência artificial que se concentra no desenvolvimento de algoritmos que permitem que os computadores aprendam com os dados.")
+        self.assertEqual(obter_resposta("deep learning"), "O aprendizado profundo é uma subárea do aprendizado de máquina que utiliza redes neurais profundas para modelar dados complexos.")
 
     def teste_saude(self):
         """Teste de respostas sobre saúde - 3 testes"""
