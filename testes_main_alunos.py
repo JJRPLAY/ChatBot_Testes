@@ -8,7 +8,7 @@ class TestObterResposta(unittest.TestCase):
         """Teste de respostas a saudações - 3 testes"""
         self.assertEqual(obter_resposta("olá"), "Olá tudo bem!")
         self.assertEqual(obter_resposta("boa tarde"), "Olá tudo bem!") 
-        self.assertEqual(obter_resposta("bom dia"), "Olá tudo bem!")
+        self.assertEqual(obter_resposta("kmk"), "Olá tudo bem!")
 
     def teste_perguntas_simples(self):
         """Teste de respostas a perguntas simples - 4 testes"""

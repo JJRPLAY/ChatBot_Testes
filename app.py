@@ -22,7 +22,7 @@ def obter_resposta(texto: str) -> str:
     # return f'Desculpa, não entendi a questão! {texto}'
 
     respostas = {
-        ('olá', 'boa tarde', 'bom dia'): 'Olá tudo bem!',
+        ('olá', 'Kmk', 'kmk','boa tarde', 'bom dia'): 'Olá tudo bem!',
         'como estás': 'Estou bem, obrigado!',
         'capital de portugal': "Lisboa",
         'como te chamas': 'O meu nome é: Bot :)',
