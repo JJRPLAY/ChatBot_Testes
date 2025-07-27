@@ -51,13 +51,15 @@ class TestObterResposta(unittest.TestCase):
 
     def teste_saude(self):
         """Teste de respostas sobre saúde - 3 testes"""
-        self.assertEqual(obter_resposta("saúde"), "A saúde é um estado de completo bem-estar físico, mental e social, e não apenas a ausência de doenças ou enfermidades.")
-        self.assertEqual(obter_resposta("problemas saúde"), "Problemas de saúde podem variar de leves a graves e podem afetar qualquer parte do corpo.")
-        self.assertEqual(obter_resposta("indisposição"), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
-
+        self.assertEqual(obter_resposta("saúde"), "A saúde é um estado de completo bem-estar físico, mental e social, e não apenas a ausência de doenças ou enfermidades.") 
+        self.assertEqual(obter_resposta("problemas de saude"), "Problemas de saúde podem variar de leves a graves e podem afetar qualquer parte do corpo.")    
+        self.assertEqual(obter_resposta("teste mental"), "A saúde mental é tão importante quanto a saúde física e envolve o bem-estar emocional, psicológico e social.")
+    
     def teste_indisposicao(self):
         """Teste de respostas sobre indisposição - 3 testes"""
         self.assertEqual(obter_resposta("indisposição"), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
+        self.assertEqual(obter_resposta("sintomas de indisposição"), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
+        self.assertEqual(obter_resposta("estou com sintomas de indisposição"), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
 
     def teste_horas_e_data(self):
         """Teste de respostas a perguntas sobre horas e data"""
@@ -65,15 +67,20 @@ class TestObterResposta(unittest.TestCase):
         data_atual = datetime.now().strftime("%d-%m-%Y")
 
         self.assertEqual(obter_resposta("que horas são"), f"São: {hora_atual} horas")
+        self.assertEqual(obter_resposta("horas"), f"São: {hora_atual} horas")
         self.assertEqual(obter_resposta("qual é a data"), f"Hoje é dia: {data_atual}")
+        self.assertEqual(obter_resposta("data"), f"Hoje é dia: {data_atual}")
 
     def teste_resposta_padrao(self):
         """Teste de resposta padrão"""
         texto_aleatorio = "xyz123"
         self.assertEqual(obter_resposta(texto_aleatorio), f"Desculpa, não entendi a questão! {texto_aleatorio}")
         texto_aleatorio2 = "teste123" # fazer outro teste de texto aleatório
+        self.assertEqual(obter_resposta(texto_aleatorio2), f"Desculpa, não entendi a questão! {texto_aleatorio2}")
         texto_aleatorio3 = "indisposição" # fazer outro teste de texto aleatório
+        self.assertEqual(obter_resposta(texto_aleatorio3), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
         texto_aleatorio4 = "sintomas de indisposição" # fazer outro teste de texto aleatório
+        self.assertEqual(obter_resposta(texto_aleatorio4), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
 
 
 if __name__ == '__main__':
