@@ -33,6 +33,8 @@ class TestObterResposta(unittest.TestCase):
 
     def teste_programar(self):
         """Teste de respostas sobre programar - 2 testes"""
+        self.assertEqual(obter_resposta("sabes programar"), "Sim, posso ajudar com programação!")
+        self.assertEqual(obter_resposta("programar"), "Programar é o processo de escrever código para criar software...")
 
     def teste_desenvolvimento(self):
         """Teste de respostas sobre desenvolvimento - 4 testes"""
